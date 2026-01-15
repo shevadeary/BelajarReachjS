@@ -1,0 +1,33 @@
+awal inisiasi git
+
+backup laragon
+
+- Buat Repository di Github
+
+New folder
+
+- Buat folder project di local komputer/laptop
+
+- Inisiasi git git init
+
+Stardew Valley
+
+- Menambahkan file/project ke folder project
+
+Tugas
+
+- Menambahkan perubahan flie/project ke git =
+
+This PC
+
+- Commit git = git commit -m "pesan commit"
+
+3D Objects
+
+- tambahkan cabang/branch = git branch -M main
+
+Desktop
+
+- hubungkan ke githhub = git remote add origin alamat git
+
+- upload file/perubahan ke github/repo online = git push -u origin main
