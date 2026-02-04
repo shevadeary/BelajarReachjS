@@ -1,0 +1,195 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #050505;
+  --card-bg: #111111;
+  --accent: #646cff;
+  --accent-secondary: #747bff;
+  --text-main: #ffffff;
+  --text-dim: #a1a1a1;
+  --border: #222222;
+  --danger: #ff4757;
+  --success: #2ed573;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 50px 20px;
+}
+
+/* --- HEADER TEMA TODO --- */
+.main-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title-app {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(to bottom, #fff, #646cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.btn-main-add {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(100, 108, 255, 0.4);
+}
+
+.btn-main-add:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* --- CONTAINER & TODO CARD --- */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.todo-card {
+  background: linear-gradient(145deg, #161616, #0d0d0d);
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--accent); /* Aksen ciri khas Todo List */
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.todo-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+}
+
+/* --- TOMBOL HAPUS --- */
+.btn-delete {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 71, 87, 0.1);
+  color: var(--danger);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-delete:hover {
+  background: var(--danger);
+  color: white;
+}
+
+/* --- ISI KARTU --- */
+.header-section h1 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.header-section p {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, var(--border), transparent);
+  margin: 20px 0;
+}
+
+.todo-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.info-item label {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  display: block;
+}
+
+.info-item span {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.status-badge {
+  background: rgba(46, 213, 115, 0.15);
+  color: var(--success) !important;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+/* --- MODAL --- */
+.overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #111;
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid var(--border);
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal form { display: flex; flex-direction: column; gap: 15px; }
+
+.modal input, .modal select {
+  background: #1a1a1a;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+}
+
+.button-group { display: flex; gap: 10px; }
+
+.btn-save { flex: 2; background: var(--accent); color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; }
+.btn-cancel { flex: 1; background: transparent; color: var(--text-dim); border: 1px solid var(--border); border-radius: 10px; cursor: pointer; }
