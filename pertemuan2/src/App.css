@@ -1,0 +1,122 @@
+:root {
+	--hitam: #0e0e0e;
+	--abu: #1a1a1a;
+	--ungu: #7c4dff;
+	--putih: #f5f5f5;
+}
+
+body {
+	background: var(--hitam);
+	color: var(--putih);
+	font-family: sans-serif;
+}
+
+.wadah {
+	padding: 40px;
+	max-width: 900px;
+	margin: auto;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.btn-tambah {
+	background: var(--ungu);
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.list-area {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 20px;
+}
+
+.todo-card {
+	background: var(--abu);
+	padding: 20px;
+	border-radius: 15px;
+	position: relative;
+	border: 1px solid #333;
+}
+
+.delete-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: none;
+	border: none;
+	color: #ff5252;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.tag {
+	font-size: 12px;
+	color: var(--ungu);
+	background: #2a2244;
+	padding: 4px 8px;
+	border-radius: 5px;
+}
+
+.divider {
+	height: 1px;
+	background: #333;
+	margin: 15px 0;
+}
+
+.gelap {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.85);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+}
+
+.kotak-modal {
+	background: #151515;
+	padding: 30px;
+	border-radius: 20px;
+	width: 350px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 15px;
+}
+
+input,
+select {
+	background: #222;
+	border: 1px solid #444;
+	color: #fff;
+	padding: 10px;
+	border-radius: 8px;
+}
+
+.btn-ok {
+	background: var(--ungu);
+	color: #fff;
+	border: none;
+	padding: 12px;
+	border-radius: 8px;
+}
+.btn-no {
+	background: none;
+	color: #888;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+}
